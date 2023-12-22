@@ -80,6 +80,7 @@ header.container-header {
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding: 15px 30px;
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.1);
 }
 
 div.header-options {
@@ -143,15 +144,45 @@ main.main-container {
   height: 100%;
 }
 
-.projects > div.card {
+div.card {
   height: 300px;
   background-color: var(--bg-color3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+div.card > div.card-image {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+div.card > div.card-links {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.card:hover {
+  /* transform: scale(1.02); */
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 0px rgba(34, 211, 238, 0.3);
+}
+
+/* .projects > div.card {
+
 }
 
 .announcements > div.card {
-  height: 300px;
-  background-color: var(--bg-color3);
-}
+} */
 
 .title-projects {
   grid-column: 1 / -1;
@@ -170,7 +201,7 @@ ul {
 .divider {
   width: 1px;
   height: 100%;
-  background-color: black;
+  background-color: var(--bg-color4);
 }
 
 header .profile-image {
@@ -185,8 +216,26 @@ button {
   background-color: transparent;
   cursor: pointer;
   color: var(--text-color);
+  font-size: 1em;
 }
 
 button:hover {
+  color: var(--color7);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a.profile-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+a:hover {
   color: var(--color7);
 }
