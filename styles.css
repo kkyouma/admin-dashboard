@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,32 +25,51 @@ html, body {
 .container {
   background-color: black;
   display: grid;
-  grid-template-columns: minmax(100px, 1fr) 5fr;
-  grid-template-rows: 100px 4fr;
+  grid-template-columns: minmax(70px, 1fr) 8fr;
+  grid-template-rows: 90px 4fr;
   min-height: 100vh;
   grid-template-areas: 
   "nav header header"
   "nav main main";
-  gap: 20px;  
+  gap: 20px;
+  padding-right: 20px;  
 }
 
 header {
   background-color: lightseagreen;
   grid-area: header;
+  margin-top: 20px;
 }
 
 header.container-header {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
+  padding: 15px 30px;
 }
 
-nav {
+div.header-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+div.header-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+nav.sidebar {
   background-color: lightcoral;
   grid-area: nav;
   grid-auto-rows: max-content;
   display: flex;
   flex-direction: column;
+  align-items: left;
 }
 
 main {
@@ -90,6 +122,7 @@ main.main-container {
 
 ul, li {
   list-style: none;
+  padding: 0;
 }
 
 ul {
@@ -97,3 +130,15 @@ ul {
   top: 10px;
 }
 
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: black;
+}
+
+header .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: lightgray;
+}
