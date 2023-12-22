@@ -169,12 +169,11 @@ div.card > div.card-links {
   height: 40px;
   justify-content: right;
   align-items: center;
-  gap: 8px;
+  gap: 15px;
 }
 
 div.card:hover {
   /* transform: scale(1.02); */
-  cursor: pointer;
   box-shadow: 0px 0px 15px 0px rgba(34, 211, 238, 0.3);
 }
 
@@ -273,6 +272,14 @@ img {
 }
 
 div.card-links > img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+}
+
+div.card-links > img:hover , span:hover {
+  cursor: pointer;
+}
+
+div.card-links > button {
+  padding: 0px;
 }
