@@ -191,6 +191,16 @@ div.card:hover {
 ul, li {
   list-style: none;
   padding: 0;
+  color: var(--color3);
+}
+
+li {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
 ul {
@@ -220,6 +230,7 @@ button {
 
 button.header-link{
   font-size: 1em;
+  color: var(--color3);
 }
 
 button:hover {
@@ -241,4 +252,16 @@ a.profile-link {
 
 a:hover {
   color: var(--color7);
+}
+
+div.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.logo:hover {
+  cursor: pointer;
 }
