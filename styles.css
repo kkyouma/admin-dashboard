@@ -17,7 +17,7 @@ html, body {
   grid-template-areas: 
   "nav header header"
   "nav main main";
-  gap: 15px;  
+  gap: 20px;  
 }
 
 header {
@@ -30,19 +30,12 @@ header.container-header {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
 }
-/* DEV */
-/* header > div { 
-  border: 1px solid brown;
-} */
 
 nav {
   background-color: lightcoral;
   grid-area: nav;
+  grid-auto-rows: max-content;
 }
-/* DEV */
-/* nav > div {
-  border: 1px solid brown;
-} */
 
 main {
   background-color: lightgreen;
@@ -60,17 +53,45 @@ main.main-container {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: max-content;
-  gap: 15px;
-  padding: 15px;
+  grid-auto-flow: row;
+  gap: 20px;
+  padding: 20px;
+  height: 100%;
+}
+
+.announcements {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: max-content;
+  grid-auto-flow: row;
+  gap: 20px;
+  padding: 20px;
+  height: 100%;
 }
 
 .projects > div.card {
-  width: 300px;
   height: 300px;
-  background-color: #fff;
-  grid-row: 2 / 3;
+  background-color: lightslategray;
+}
+
+.announcements > div.card {
+  height: 300px;
+  background-color: lightsteelblue;
+}
+
+.title-projects {
+  grid-column: 1 / -1;
 }
 
 
+
+ul, li {
+  list-style: none;
+}
+
+ul {
+  position: sticky;
+  top: 10px;
+}
