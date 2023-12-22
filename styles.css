@@ -15,6 +15,22 @@
   box-sizing: border-box;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+  --bg-color: #030712;
+  --bg-color2: #111827;
+  --bg-color3: #1f2937;
+  --bg-color4: #374151;
+  --color1: #4b5563;
+  --color2: #6b7280;
+  --color3: #9ca3af;
+  --color4: #d1d5db;
+  --color5: #e5e7eb;
+  --color6: #f3f4f6;
+  --text-color: #f9fafb;
+  }
+}
+
 :root.light {
   --bg-color: #f9fafb;
   --bg-color2: #f3f4f6;
@@ -29,21 +45,6 @@
   --text-color: #030712;
 }
 
-:root.dark {
-  --bg-color: #030712;
-  --bg-color2: #111827;
-  --bg-color3: #1f2937;
-  --bg-color4: #374151;
-  --color1: #4b5563;
-  --color2: #6b7280;
-  --color3: #9ca3af;
-  --color4: #d1d5db;
-  --color5: #e5e7eb;
-  --color6: #f3f4f6;
-  --text-color: #f9fafb;
-}
-
-
 html, body {
   font-family: 'Roboto', system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   height: 100%;
@@ -52,7 +53,7 @@ html, body {
 }
 
 .container {
-  background-color: black;
+  background-color: var(--bg-color);
   display: grid;
   grid-template-columns: minmax(70px, 1fr) 8fr;
   grid-template-rows: 90px 4fr;
@@ -170,4 +171,10 @@ header .profile-image {
   height: 40px;
   border-radius: 50%;
   background-color: lightgray;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
