@@ -216,6 +216,9 @@ button {
   background-color: transparent;
   cursor: pointer;
   color: var(--text-color);
+}
+
+button.header-link{
   font-size: 1em;
 }
 
