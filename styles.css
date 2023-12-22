@@ -3,6 +3,7 @@
 }
 
 html, body {
+  font-family: 'Roboto', system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   height: 100%;
   margin: 0;
   padding: 0;
@@ -35,6 +36,8 @@ nav {
   background-color: lightcoral;
   grid-area: nav;
   grid-auto-rows: max-content;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -85,8 +88,6 @@ main.main-container {
   grid-column: 1 / -1;
 }
 
-
-
 ul, li {
   list-style: none;
 }
@@ -95,3 +96,4 @@ ul {
   position: sticky;
   top: 10px;
 }
+
